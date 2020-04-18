@@ -30,7 +30,7 @@
 
 .card-info:last-child {
     flex-grow: 2;
-    align-self: flex-end;
+    align-self: flex-end; 
     background: burlywood;
     display: flex;
     flex-direction: column-reverse;
@@ -59,4 +59,60 @@
 
 .badge:hover {
     transform: rotate(-20deg);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile menu */
+#navigation-bar-list{
+    display: none;
+    position: absolute;
+    background: rgba(233,233,233, .92);
+    z-index: 999999999;
+}
+
+#navigation-bar-list.active{
+    display: flex;
+    flex-direction: column;
+}
+
+#navigation-bar ul li{
+    list-style-type: none;
+    padding: 3px 10px;
+    margin: 3px;
+}
+
+#navigation-bar ul li a{
+    color: black;
+}
+
+/* Desktop menu */
+@media all and (min-width: 900px) {
+    nav .toggle{
+        display: none;
+    }
+
+    #navigation-bar-list{
+        position: initial;
+        display: flex;
+        background: rgba(233,233,233, .92);
+    }
+    
+    #navigation-bar ul li{
+        list-style-type: none;
+        padding: 3px;
+        margin: 3px;
+    }
+    
+    #navigation-bar ul li a:hover{
+        color: rgb(75, 74, 74);
+        text-decoration: underline;
+    }
 }
